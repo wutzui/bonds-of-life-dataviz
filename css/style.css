@@ -1,0 +1,462 @@
+/*
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,700&subset=latin,latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,700&subset=latin,latin-ext");
+a, abbr, address, article, aside, audio, b, blockquote, body, canvas, caption, cite,
+code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure,
+footer, form, h1, h2, h3, h4, h5, h6, header, html, i, iframe, img, ins, kbd, label,
+legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, section, samp,
+small, span, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr,
+ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: 'Open Sans', sans-serif;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#column-baseline-grid {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3111px;
+}
+
+.all-grids {
+  background-image: url("../img/modular-grid.png"), linear-gradient(90deg, rgba(200, 0, 0, 0.2) 60px, transparent 0px), linear-gradient(0deg, transparent 95%, rgba(56, 255, 255, 0.8) 100%);
+  background-position: center top, 0% 0%, 0% 0%;
+  background-size: auto auto, 80px 100%, 100% 24px;
+  background-attachment: scroll, fixed, fixed;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-color: transparent, transparent, transparent;
+}
+
+.modular-grid {
+  background-image: linear-gradient(90deg, rgba(200, 0, 0, 0.2) 60px, transparent 0px), linear-gradient(0deg, transparent 95%, rgba(56, 255, 255, 0.8) 100%);
+  background-size: 80px 100%, 100% 24px;
+}
+
+.column-grid {
+  background-image: linear-gradient(90deg, rgba(200, 0, 0, 0.2) 60px, transparent 0px);
+  background-size: 80px 100%;
+}
+
+.baseline-grid {
+  background-image: linear-gradient(0deg, transparent 95%, rgba(56, 255, 255, 0.8) 100%);
+  background-size: 100% 24px;
+}
+
+.user-supplied-bg-image {
+  background-image: url("../img/modular-grid.png");
+  background-position: center top;
+  background-size: auto auto;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: whitesmoke;
+  line-height: 160%;
+  font-size: 16px;
+  margin: 0;
+}
+
+#title {
+  width: 250px;
+  top: 10px;
+  left: 10px;
+  margin: 0;
+}
+
+path.link {
+  fill: none;
+  stroke-width: 2px;
+}
+
+.node:not(:hover) .nodetext {
+  display: none;
+}
+
+#info {
+  position: fixed;
+  top: 150px;
+  left: 30px;
+  padding: 10px;
+  width: 250px;
+  height: 500px;
+}
+
+#name {
+  font-size: 30px;
+  margin: 10px 0;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 10px 0;
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 30px;
+}
+
+h2, h3 {
+  font-size: 18px;
+  margin: 5px 0;
+  font-weight: normal;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+header h1 {
+  margin: 10px;
+}
+
+header img {
+  margin: 0;
+  position: fixed;
+  padding: 30px;
+  top: 0;
+}
+
+.title-img-1 {
+  height: 60px;
+  opacity: 1;
+}
+
+.title-img-2 {
+  height: 60px;
+  opacity: 0;
+}
+
+.titles:hover .title-img-1 {
+  opacity: 0;
+}
+
+.titles:hover .title-img-2 {
+  opacity: 1;
+}
+
+.links {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  top: -2px;
+  right: 30px;
+}
+
+#links-btn {
+  display: inline-block;
+  width: 110px;
+  height: 23px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  background-color: black;
+  color: whitesmoke;
+  text-decoration: none;
+  text-align: center;
+  margin-left: 30px;
+}
+
+#links-btn a {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+#links-btn:hover {
+  color: black;
+  background-color: #c8c8c8;
+  -webkit-transition: all 0.2s ease-in 0s;
+  -moz-transition: all 0.2s ease-in 0s;
+  -o-transition: all 0.2s ease-in 0s;
+  transition: all 0.2s ease-in 0s;
+}
+
+#links-btn a:hover {
+  color: black;
+  background-color: #c8c8c8;
+  -webkit-transition: all 0.2s ease-in 0s;
+  -moz-transition: all 0.2s ease-in 0s;
+  -o-transition: all 0.2s ease-in 0s;
+  transition: all 0.2s ease-in 0s;
+}
+
+#show-year {
+  position: fixed;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 26px;
+  right: 30px;
+  bottom: 70px;
+  margin-bottom: 10px;
+}
+
+#viz {
+  top: 0;
+  margin: 0 auto;
+}
+
+#slider-widget {
+  position: fixed;
+  width: 480px;
+  right: 30px;
+  bottom: 20px;
+}
+
+#year-slider {
+  width: 460px;
+}
+
+#year-number p {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+#year-number p:nth-child(1) {
+  margin-right: 410px;
+}
+
+.axis {
+  fill: gray;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  font-family: "Source Code Pro", Consolas, monaco, monospace;
+}
+
+.axis .halo {
+  stroke: gray;
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+
+.slider .handle path {
+  stroke: black;
+  stroke-width: 3px;
+  stroke-linecap: round;
+  pointer-events: none;
+  padding-top: 50px;
+}
+
+.slider .handle text {
+  fill: black;
+  text-align: center;
+  font-size: 18px;
+}
+
+#year-slider.ui-corner-all,
+#year-slider .ui-corner-all {
+  border-radius: 0;
+}
+
+#year-slider.ui-slider {
+  border: 0;
+  background: #0a0a0a;
+  border-radius: 7px;
+}
+
+#year-slider.ui-slider-horizontal {
+  height: 6px;
+}
+
+#year-slider.ui-slider-vertical {
+  height: 15em;
+  width: 6px;
+}
+
+#year-slider .ui-slider-handle {
+  width: 20px;
+  height: 20px;
+  background: #c8c8c8;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+#year-slider.ui-slider-horizontal .ui-slider-handle {
+  top: 50%;
+  margin-top: -10px;
+}
+
+#year-slider.ui-slider-vertical .ui-slider-handle {
+  left: 50%;
+  margin-left: -10px;
+  width: 50px;
+  height: 50px;
+}
+
+#year-slider .ui-slider-handle:hover {
+  opacity: .8;
+}
+
+#year-slider .ui-slider-range {
+  border: 0;
+  border-radius: 7;
+  background: #f99;
+}
+
+#year-slider.ui-slider-horizontal .ui-slider-range {
+  top: 0;
+  height: 6px;
+}
+
+#year-slider.ui-slider-vertical .ui-slider-range {
+  left: 0;
+  width: 6px;
+}
+
+#btns {
+  position: fixed;
+  top: 150px;
+  right: 30px;
+  width: 120px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#node-length {
+  font-size: 40px;
+  text-align: center;
+  margin: 15px;
+}
+
+.btn {
+  margin-bottom: 10px;
+  border-radius: 30px;
+  text-align: center;
+  width: 120px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: white;
+}
+
+#physical-btn {
+  background-color: whitesmoke;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: #FFB580;
+}
+
+#physical-btn:hover {
+  background-color: #FFB580;
+}
+
+#phone-btn {
+  background-color: whitesmoke;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: #B7BC07;
+}
+
+#phone-btn:hover {
+  background-color: #B7BC07;
+}
+
+#post-btn {
+  background-color: whitesmoke;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: #C5AF82;
+}
+
+#post-btn:hover {
+  background-color: #C5AF82;
+}
+
+#email-btn {
+  background-color: whitesmoke;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: #E86E6E;
+}
+
+#email-btn:hover {
+  background-color: #E86E6E;
+}
+
+#msn-btn {
+  background-color: whitesmoke;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: #54D164;
+}
+
+#msn-btn:hover {
+  background-color: #54D164;
+}
+
+#blog-btn {
+  background-color: whitesmoke;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: #E3AAD6;
+}
+
+#blog-btn:hover {
+  background-color: #E3AAD6;
+}
+
+#message-btn {
+  background-color: whitesmoke;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: #A4E0D8;
+}
+
+#message-btn:hover {
+  background-color: #A4E0D8;
+}
+
+#facebook-btn {
+  background-color: whitesmoke;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: #6D8BC9;
+}
+
+#facebook-btn:hover {
+  background-color: #6D8BC9;
+}
