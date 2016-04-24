@@ -2,8 +2,9 @@
 @import 'variables';
 @import 'grid';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,700&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,200,500');
 
-@mixin transition ($property: all, $duration: 0.2s, 
+@mixin transition ($property: all, $duration: 0.4s, 
    $timing_function: ease-in, $delay: 0s){
    -webkit-transition: $property $duration $timing_function $delay;
    -moz-transition: $property $duration $timing_function $delay;
@@ -27,6 +28,64 @@ body {
 	left: 10px;
 	margin: 0;
 }
+
+// =================================================================================
+// about modal
+// =================================================================================
+
+
+#about-modal {
+	position: fixed;
+	z-index: -10;
+	// display: none;
+	width: 100vw;
+	height: 100vh;
+	opacity: 0;
+	background-color: rgba(250, 250, 250, 0.95);
+}
+
+#close-btn {
+	position: fixed;
+	width: 30px;
+	top: 30px;
+	right: 30px;
+}
+
+#profile-img {
+	position:fixed;
+	top: 30vh;
+	left: 15vw;
+	width: 20vw;
+	border-radius: 100%;
+}
+
+#about-p {
+	position: fixed;
+	top: 25vh;
+	left: 35vw;
+	width: 43vw;
+	padding: 3%;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+#about-p h2 {
+	font-weight: 500;
+}
+
+#contact h4 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+}
+
+#contact a {
+	text-decoration: none;
+	color: black;
+}
+
+#contact a:hover {
+	color: grey;
+}	
 
 // =================================================================================
 // d3 node & path
@@ -122,7 +181,7 @@ header img {
 	right: 30px;
 }
 
-#links-btn {
+.links-btn {
 	display: inline-block;
 	width: 110px;
 	height: 23px;
@@ -135,20 +194,20 @@ header img {
 	margin-left:30px;
 }
 
-#links-btn a {
+.links-btn a {
 	font-size: 12px;
 	letter-spacing: 2px;
 	color: rgb(245, 245, 245);
 	text-decoration: none;
 }
 
-#links-btn:hover {
+.links-btn:hover {
 	color: black;
 	background-color: rgb(200, 200, 200);
 	@include transition; 
 }
 
-#links-btn a:hover {
+.links-btn a:hover {
 	color: black;
 	background-color: rgb(200, 200, 200);
 	@include transition; 	
@@ -177,7 +236,7 @@ header img {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 26px;
 	right: 30px;
-	bottom: 70px;
+	bottom: 150px;
 	margin-bottom: 10px;
 }
 
@@ -305,11 +364,22 @@ header img {
 
 #btns {
 	position: fixed;
-	top: 150px;
+	z-index: 3;
+	top: 100px;
 	right: 30px;
 	width: 120px;
 	letter-spacing: 2px;
 	text-transform: uppercase; 
+}
+
+#btns p {
+	color: gray;
+	font-size: 13px;
+	opacity: 0;
+}
+
+#btns:hover p {
+	opacity: 1;
 }
 
 #node-length {
@@ -417,4 +487,15 @@ header img {
 
 #facebook-btn:hover {
 	background-color: #6D8BC9;
+}
+
+// =================================================================================
+// line chart
+// =================================================================================
+
+#line-chart {
+	position: fixed;
+	right: 40px;
+	bottom: 60px;
+	z-index: -3;
 }

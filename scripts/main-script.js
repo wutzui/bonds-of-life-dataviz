@@ -35,6 +35,197 @@ $("document").ready(function(){
                   .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
 
 
+
+    /******************************************************************************/
+    //line chart variables and data.
+
+    var lw = 460,
+        lh = 200;
+
+    var lineData_phyiscal = [
+      {x: 0, y: 200-(5*3)}, {x: 1, y: 200-(6*3)},
+      {x: 2, y: 200-(7*3)}, {x: 3, y: 200-(8*3)},
+      {x: 4, y: 200-(6*3)}, {x: 5, y: 200-(9*3)},
+      {x: 6, y: 200-(9*3)}, {x: 7, y: 200-(9*3)},
+      {x: 8, y: 200-(9*3)}, {x: 9, y: 200-(11*3)},
+      {x: 10, y: 200-(14*3)}, {x: 11, y: 200-(12*3)},
+      {x: 12, y: 200-(13*3)}, {x: 13, y: 200-(16*3)},
+      {x: 14, y: 200-(15*3)}, {x: 15, y: 200-(18*3)},
+      {x: 16, y: 200-(17*3)}, {x: 17, y: 200-(16*3)},
+      {x: 18, y: 200-(29*3)}, {x: 19, y: 200-(24*3)},
+      {x: 20, y: 200-(31*3)}, {x: 21, y: 200-(24*3)},
+      {x: 22, y: 200-(22*3)}, {x: 23, y: 200-(16*3)},
+      {x: 24, y: 200-(14*3)}, {x: 25, y: 200-(16*3)},
+      {x: 26, y: 200-(7*3)}
+    ];
+
+    var lineData_phone = [
+      {x: 6, y: 200-(3*3)}, {x: 7, y: 200-(3*3)},
+      {x: 8, y: 200-(3*3)}, {x: 9, y: 200-(3*3)},
+      {x: 10, y: 200-(3*3)}, {x: 11, y: 200-(3*3)},
+      {x: 12, y: 200-(7*3)}, {x: 13, y: 200-(7*3)},
+      {x: 14, y: 200-(7*3)}, {x: 15, y: 200-(7*3)},
+      {x: 16, y: 200-(6*3)}, {x: 17, y: 200-(7*3)},
+      {x: 18, y: 200-(8*3)}, {x: 19, y: 200-(9*3)},
+      {x: 20, y: 200-(9*3)}, {x: 21, y: 200-(8*3)},
+      {x: 22, y: 200-(8*3)}, {x: 23, y: 200-(6*3)},
+      {x: 24, y: 200-(7*3)}, {x: 25, y: 200-(6*3)},
+      {x: 26, y: 200-(5*3)}
+    ];
+
+    var lineData_post = [
+      {x: 10, y: 200-(2*3)}, {x: 11, y: 200-(2*3)},
+      {x: 12, y: 200-(5*3)}, {x: 13, y: 200-(5*3)},
+      {x: 14, y: 200-(5*3)}, {x: 15, y: 200-(5*3)},
+      {x: 16, y: 200-(7*3)}, {x: 17, y: 200-(3*3)},
+      {x: 18, y: 200-(2*3)}, {x: 19, y: 200-(3*3)},
+      {x: 20, y: 200-(4*3)}, {x: 21, y: 200-(3*3)},
+      {x: 22, y: 200-(3*3)}, {x: 23, y: 200-(9*3)},
+      {x: 24, y: 200-(5*3)}, {x: 25, y: 200-(6*3)},
+      {x: 26, y: 200-(8*3)}
+    ];
+
+    var lineData_email = [
+      {x: 18, y: 200-(11*3)}, {x: 19, y: 200-(11*3)},
+      {x: 20, y: 200-(13*3)}, {x: 21, y: 200-(13*3)},
+      {x: 22, y: 200-(15*3)}, {x: 23, y: 200-(4*3)},
+      {x: 24, y: 200-(4*3)}, {x: 25, y: 200-(8*3)},
+      {x: 26, y: 200-(6*3)}
+    ];
+
+    var lineData_msn = [
+                             {x: 13, y: 200-(5*3)},
+      {x: 14, y: 200-(5*3)}, {x: 15, y: 200-(8*3)},
+      {x: 16, y: 200-(13*3)}, {x: 17, y: 200-(13*3)},
+      {x: 18, y: 200-(12*3)}, {x: 19, y: 200-(12*3)},
+      {x: 20, y: 200-(9*3)}, {x: 21, y: 200-(9*3)}
+    ];
+
+    var lineData_blog = [
+                              {x: 15, y: 200-(4*3)},
+      {x: 16, y: 200-(10*3)}, {x: 17, y: 200-(10*3)},
+      {x: 18, y: 200-(18*3)}, {x: 19, y: 200-(19*3)},
+      {x: 20, y: 200-(19*3)}, {x: 21, y: 200-(10*3)},
+      {x: 22, y: 200-(2*3)}, {x: 23, y: 200-(2*3)}
+    ];
+
+    var lineData_message = [
+      {x: 16, y: 200-(3*3)}, {x: 17, y: 200-(3*3)},
+      {x: 18, y: 200-(4*3)}, {x: 19, y: 200-(4*3)},
+      {x: 20, y: 200-(5*3)}, {x: 21, y: 200-(6*3)},
+      {x: 22, y: 200-(10*3)}, {x: 23, y: 200-(18*3)},
+      {x: 24, y: 200-(16*3)}, {x: 25, y: 200-(25*3)},
+      {x: 26, y: 200-(20*3)}
+    ];
+
+    var lineData_facebook = [
+                             {x: 19, y: 200-(20*3)},
+      {x: 20, y: 200-(27*3)}, {x: 21, y: 200-(30*3)},
+      {x: 22, y: 200-(38*3)}, {x: 23, y: 200-(37*3)},
+      {x: 24, y: 200-(38*3)}, {x: 25, y: 200-(45*3)},
+      {x: 26, y: 200-(47*3)}
+    ];
+
+    var svg = d3.select('#line-chart')
+    .append('svg')
+    .attr({
+      'width': lw,
+      'height': lh
+    });
+
+    var line = d3.svg.line()
+      .x(function(d) { return d.x * 18; })
+      .y(function(d) { return d.y ; })
+      .interpolate('basis');
+
+    svg.append('path')
+    .attr('class', 'line-physical')
+    .attr({
+      'd': line(lineData_phyiscal),
+      'y': 0,
+      'stroke': '#FFB580',
+      'stroke-width': '2px',
+      'fill': 'none',
+      'opacity': '0.3'
+    });
+
+    svg.append('path')
+    .attr('class', 'line-phone')
+    .attr({
+      'd': line(lineData_phone),
+      'y': 0,
+      'stroke': '#B7BC07',
+      'stroke-width': '2px',
+      'fill': 'none',
+      'opacity': '0.3'
+    });  
+
+    svg.append('path')
+    .attr('class', 'line-post')
+    .attr({
+      'd': line(lineData_post),
+      'y': 0,
+      'stroke': '#C5AF82',
+      'stroke-width': '2px',
+      'fill': 'none',
+      'opacity': '0.3'
+    });   
+
+    svg.append('path')
+    .attr('class', 'line-email')
+    .attr({
+      'd': line(lineData_email),
+      'y': 0,
+      'stroke': '#E86E6E',
+      'stroke-width': '2px',
+      'fill': 'none',
+      'opacity': '0.3'
+    });   
+
+    svg.append('path')
+    .attr('class', 'line-msn')
+    .attr({
+      'd': line(lineData_msn),
+      'y': 0,
+      'stroke': '#54D164',
+      'stroke-width': '2px',
+      'fill': 'none',
+      'opacity': '0.3'
+    });   
+
+    svg.append('path')
+    .attr('class', 'line-blog')
+    .attr({
+      'd': line(lineData_blog),
+      'y': 0,
+      'stroke': '#E3AAD6',
+      'stroke-width': '2px',
+      'fill': 'none',
+      'opacity': '0.3'
+    });   
+
+    svg.append('path')
+    .attr('class', 'line-message')
+    .attr({
+      'd': line(lineData_message),
+      'y': 0,
+      'stroke': '#A4E0D8',
+      'stroke-width': '2px',
+      'fill': 'none',
+      'opacity': '0.3'
+    });   
+
+    svg.append('path')
+    .attr('class', 'line-facebook')
+    .attr({
+      'd': line(lineData_facebook),
+      'y': 0,
+      'stroke': '#6D8BC9',
+      'stroke-width': '2px',
+      'fill': 'none',
+      'opacity': '0.3'
+    });   
+
     // =================================================================================
     // data json
     // =================================================================================
@@ -177,8 +368,8 @@ $("document").ready(function(){
         // Append hero text
         .on( 'click', function (d) {
             d3.select("#name").text(d.name); 
-            d3.select("h2").html(d.relation); 
-            d3.select("h3").html(d.relation); 
+            d3.select("#relation").html(d.relation); 
+            d3.select("#description").html(d.description); 
         })
 
         .on( 'mouseenter', function() {
@@ -234,6 +425,482 @@ $("document").ready(function(){
             node.attr("transform", nodeTransform);    
         }
 
+        /******************************************************************************/
+        //before slider: buttons actions.
+
+                var sliderCircle = d3.selectAll("circle");
+                var sliderImage = d3.selectAll("image");  
+
+                $("#physical-btn").mouseover(function(){
+
+                        sliderCircle
+                        .transition()
+                        .attr("cx", function(d) { return -5;})
+                        .attr("cy", function(d) { return -5;})
+                        .style("stroke", "#FFB580")
+                        .style("opacity", "0.7")
+                        .attr("r", 35);
+                        sliderImage 
+                        .transition()
+                        .attr("x", function(d) { return -40;})
+                        .attr("y", function(d) { return -40;})
+                        .attr("height", 70)
+                        .attr("width", 70);
+                        
+                            sliderCircle
+                            .filter(function(d) {return d.physical_2016 !== 1;})
+                            .transition()
+                            .attr("cx", function(d) { return 0;})
+                            .attr("cy", function(d) { return 0;})
+                            .style("fill", "none")
+                            .style( "stroke", "transparent")
+                            .style("opacity", "1")
+                            .attr("r", 25);  
+                            sliderImage 
+                            .filter(function(d) {return d.physical_2016 !== 1;})
+                            .transition()
+                            .attr("x", function(d) { return -25;})
+                            .attr("y", function(d) { return -25;})
+                            .attr("height", 50)
+                            .attr("width", 50)
+                            .style("opacity", "0.3");
+
+                          d3.select('.line-physical')
+                            .style("opacity", "1");
+                })
+
+                $("#physical-btn").mouseout(function(){
+
+                          sliderCircle
+                          .transition()
+                          .attr("cx", function(d) { return 0;})
+                          .attr("cy", function(d) { return 0;})
+                          .style("fill", "none")
+                          .style( "stroke", "transparent")
+                          .style("opacity", "1")
+                          .attr("r", 25);  
+                          sliderImage 
+                          .transition()
+                          .attr("x", function(d) { return -25;})
+                          .attr("y", function(d) { return -25;})
+                          .attr("height", 50)
+                          .attr("width", 50)
+                          .style("opacity", "1");
+
+                          d3.select('.line-physical')
+                            .style("opacity", "0.3");
+                }) 
+
+
+                $("#phone-btn").mouseover(function(){
+                    
+                        sliderCircle
+                        .transition()
+                        .attr("cx", function(d) { return -5;})
+                        .attr("cy", function(d) { return -5;})
+                        .style("stroke", "#B7BC07")
+                        .style("opacity", "0.7")
+                        .attr("r", 35);
+                        sliderImage 
+                        .transition()
+                        .attr("x", function(d) { return -40;})
+                        .attr("y", function(d) { return -40;})
+                        .attr("height", 70)
+                        .attr("width", 70);
+                        
+                            sliderCircle
+                            .filter(function(d) {return d.phone_2016 !== 1;})
+                            .transition()
+                            .attr("cx", function(d) { return 0;})
+                            .attr("cy", function(d) { return 0;})
+                            .style( "stroke", "transparent") 
+                            .style("opacity", "1")
+                            .attr("r", 25);  
+                            sliderImage 
+                            .filter(function(d) {return d.phone_2016 !== 1;})
+                            .transition()
+                            .attr("x", function(d) { return -25;})
+                            .attr("y", function(d) { return -25;})
+                            .attr("height", 50)
+                            .attr("width", 50)
+                            .style("opacity", "0.3");  
+                          
+                          d3.select('.line-phone')
+                            .style("opacity", "1");                                                          
+                })
+
+                $("#phone-btn").mouseout(function(){
+
+                          sliderCircle
+                          .transition()
+                          .attr("cx", function(d) { return 0;})
+                          .attr("cy", function(d) { return 0;})
+                          .style( "stroke", "transparent")
+                          .style("opacity", "1")
+                          .attr("r", 25);  
+                          sliderImage 
+                          .transition()
+                          .attr("x", function(d) { return -25;})
+                          .attr("y", function(d) { return -25;})
+                          .attr("height", 50)
+                          .attr("width", 50)
+                          .style("opacity", "1");
+
+                          d3.select('.line-phone')
+                            .style("opacity", "0.3");    
+                }) 
+
+                $("#post-btn").mouseover(function(){
+
+                        sliderCircle
+                        .transition()
+                        .attr("cx", function(d) { return -5;})
+                        .attr("cy", function(d) { return -5;})
+                        .style("stroke", "#C5AF82")
+                        .style( "opacity", "0.7") 
+                        .attr("r", 35);
+                        sliderImage 
+                        .transition()
+                        .attr("x", function(d) { return -40;})
+                        .attr("y", function(d) { return -40;})
+                        .attr("height", 70)
+                        .attr("width", 70);
+                        
+                            sliderCircle
+                            .filter(function(d) {return d.post_2016 !== 1;})
+                            .transition()
+                            .attr("cx", function(d) { return 0;})
+                            .attr("cy", function(d) { return 0;})
+                            .style( "stroke", "transparent")
+                            .style( "opacity", "1")  
+                            .attr("r", 25);  
+                            sliderImage 
+                            .filter(function(d) {return d.post_2016 !== 1;})
+                            .transition()
+                            .attr("x", function(d) { return -25;})
+                            .attr("y", function(d) { return -25;})
+                            .attr("height", 50)
+                            .attr("width", 50)
+                            .style("opacity", "0.3");                            
+
+                          d3.select('.line-post')
+                            .style("opacity", "1");
+                })
+
+                $("#post-btn").mouseout(function(){
+
+                          sliderCircle
+                          .transition()
+                          .attr("cx", function(d) { return 0;})
+                          .attr("cy", function(d) { return 0;})
+                          .style( "stroke", "transparent")
+                          .style( "opacity", "1")  
+                          .attr("r", 25);  
+                          sliderImage 
+                          .transition()
+                          .attr("x", function(d) { return -25;})
+                          .attr("y", function(d) { return -25;})
+                          .attr("height", 50)
+                          .attr("width", 50)
+                          .style("opacity", "1");
+
+                          d3.select('.line-post')
+                            .style("opacity", "0.3");
+                }) 
+
+                $("#email-btn").mouseover(function(){
+
+                        sliderCircle
+                        .transition()
+                        .attr("cx", function(d) { return -5;})
+                        .attr("cy", function(d) { return -5;})
+                        .style("stroke", "#E86E6E")
+                        .style( "opacity", "0.7") 
+                        .attr("r", 35);
+                        sliderImage 
+                        .transition()
+                        .attr("x", function(d) { return -40;})
+                        .attr("y", function(d) { return -40;})
+                        .attr("height", 70)
+                        .attr("width", 70);
+                        
+                            sliderCircle
+                            .filter(function(d) {return d.email_2016 !== 1;})
+                            .transition()
+                            .attr("cx", function(d) { return 0;})
+                            .attr("cy", function(d) { return 0;})
+                            .style( "stroke", "transparent") 
+                            .style( "opacity", "1") 
+                            .attr("r", 25);  
+                            sliderImage 
+                            .filter(function(d) {return d.email_2016 !== 1;})
+                            .transition()
+                            .attr("x", function(d) { return -25;})
+                            .attr("y", function(d) { return -25;})
+                            .attr("height", 50)
+                            .attr("width", 50)
+                            .style("opacity", "0.3");  
+                          
+                          d3.select('.line-email')
+                            .style("opacity", "1");                         
+                })
+
+                $("#email-btn").mouseout(function(){
+
+                          sliderCircle
+                          .transition()
+                          .attr("cx", function(d) { return 0;})
+                          .attr("cy", function(d) { return 0;})
+                          .style( "stroke", "transparent") 
+                          .style( "opacity", "1") 
+                          .attr("r", 25);  
+                          sliderImage 
+                          .transition()
+                          .attr("x", function(d) { return -25;})
+                          .attr("y", function(d) { return -25;})
+                          .attr("height", 50)
+                          .attr("width", 50)
+                          .style("opacity", "1");
+
+                          d3.select('.line-email')
+                            .style("opacity", "0.3");  
+                }) 
+
+                $("#msn-btn").mouseover(function(){
+
+                        sliderCircle
+                        .transition()
+                        .attr("cx", function(d) { return -5;})
+                        .attr("cy", function(d) { return -5;})
+                        .style("stroke", "#54D164")
+                        .style("opacity", 0.7)
+                        .attr("r", 35);
+                        sliderImage 
+                        .transition()
+                        .attr("x", function(d) { return -40;})
+                        .attr("y", function(d) { return -40;})
+                        .attr("height", 70)
+                        .attr("width", 70);
+                        
+                            sliderCircle
+                            .filter(function(d) {return d.msn_2016 !== 1;})
+                            .transition()
+                            .attr("cx", function(d) { return 0;})
+                            .attr("cy", function(d) { return 0;})
+                            .style( "stroke", "transparent")
+                            .style("opacity", 1)
+                            .attr("r", 25);  
+                            sliderImage 
+                            .filter(function(d) {return d.msn_2016 !== 1;})
+                            .transition()
+                            .attr("x", function(d) { return -25;})
+                            .attr("y", function(d) { return -25;})
+                            .attr("height", 50)
+                            .attr("width", 50)
+                            .style("opacity", "0.3");
+                          
+                          d3.select('.line-msn')
+                            .style("opacity", "1");
+                })
+
+                $("#msn-btn").mouseout(function(){
+
+                          sliderCircle
+                          .transition()
+                          .attr("cx", function(d) { return 0;})
+                          .attr("cy", function(d) { return 0;})
+                          .style( "stroke", "transparent")
+                          .style("opacity", 1)
+                          .attr("r", 25);  
+                          sliderImage 
+                          .transition()
+                          .attr("x", function(d) { return -25;})
+                          .attr("y", function(d) { return -25;})
+                          .attr("height", 50)
+                          .attr("width", 50)
+                          .style("opacity", "1");
+                          
+                          d3.select('.line-msn')
+                            .style("opacity", "0.3");
+                })
+
+                $("#blog-btn").mouseover(function(){
+
+                        sliderCircle
+                        .transition()
+                        .attr("cx", function(d) { return -5;})
+                        .attr("cy", function(d) { return -5;})
+                        .style("stroke", "#E3AAD6")
+                        .style("opacity", 0.7)
+                        .attr("r", 35);
+                        sliderImage 
+                        .transition()
+                        .attr("x", function(d) { return -40;})
+                        .attr("y", function(d) { return -40;})
+                        .attr("height", 70)
+                        .attr("width", 70);
+                        
+                            sliderCircle
+                            .filter(function(d) {return d.blog_2016 !== 1;})
+                            .transition()
+                            .attr("cx", function(d) { return 0;})
+                            .attr("cy", function(d) { return 0;})
+                            .style( "stroke", "transparent")
+                            .style("opacity", 1)
+                            .attr("r", 25);  
+                            sliderImage 
+                            .filter(function(d) {return d.blog_2016 !== 1;})
+                            .transition()
+                            .attr("x", function(d) { return -25;})
+                            .attr("y", function(d) { return -25;})
+                            .attr("height", 50)
+                            .attr("width", 50)
+                            .style("opacity", "0.3");
+
+                          d3.select('.line-blog')
+                            .style("opacity", "1");
+                })
+
+                $("#blog-btn").mouseout(function(){
+
+                          sliderCircle
+                          .transition()
+                          .attr("cx", function(d) { return 0;})
+                          .attr("cy", function(d) { return 0;})
+                          .style( "stroke", "transparent")
+                          .style("opacity", 1)
+                          .attr("r", 25);  
+                          sliderImage 
+                          .transition()
+                          .attr("x", function(d) { return -25;})
+                          .attr("y", function(d) { return -25;})
+                          .attr("height", 50)
+                          .attr("width", 50)
+                          .style("opacity", "1");
+
+                          d3.select('.line-blog')
+                            .style("opacity", "0.3");
+                }) 
+
+                $("#message-btn").mouseover(function(){
+
+                        sliderCircle
+                        .transition()
+                        .attr("cx", function(d) { return -5;})
+                        .attr("cy", function(d) { return -5;})
+                        .style("stroke", "#A4E0D8")
+                        .style("opacity", "0.7")
+                        .attr("r", 35);
+                        sliderImage 
+                        .transition()
+                        .attr("x", function(d) { return -40;})
+                        .attr("y", function(d) { return -40;})
+                        .attr("height", 70)
+                        .attr("width", 70);
+                        
+                            sliderCircle
+                            .filter(function(d) {return d.message_2016 !== 1;})
+                            .transition()
+                            .attr("cx", function(d) { return 0;})
+                            .attr("cy", function(d) { return 0;})
+                            .style( "stroke", "transparent") 
+                            .style("opacity", "1")
+                            .attr("r", 25);  
+                            sliderImage 
+                            .filter(function(d) {return d.message_2016 !== 1;})
+                            .transition()
+                            .attr("x", function(d) { return -25;})
+                            .attr("y", function(d) { return -25;})
+                            .attr("height", 50)
+                            .attr("width", 50)
+                            .style("opacity", "0.3"); 
+
+                          d3.select('.line-message')
+                            .style("opacity", "1");                             
+                })
+
+                $("#message-btn").mouseout(function(){
+
+                          sliderCircle
+                          .transition()
+                          .attr("cx", function(d) { return 0;})
+                          .attr("cy", function(d) { return 0;})
+                          .style( "stroke", "transparent") 
+                          .style("opacity", "1")
+                          .attr("r", 25);  
+                          sliderImage 
+                          .transition()
+                          .attr("x", function(d) { return -25;})
+                          .attr("y", function(d) { return -25;})
+                          .attr("height", 50)
+                          .attr("width", 50)
+                          .style("opacity", "1");
+
+                          d3.select('.line-message')
+                            .style("opacity", "0.3");        
+                }) 
+
+                $("#facebook-btn").mouseover(function(){
+
+                        sliderCircle
+                        .transition()
+                        .attr("cx", function(d) { return -5;})
+                        .attr("cy", function(d) { return -5;})
+                        .style("stroke", "#6D8BC9")
+                        .style("opacity", "0.7")
+                        .attr("r", 35);
+                        sliderImage 
+                        .transition()
+                        .attr("x", function(d) { return -40;})
+                        .attr("y", function(d) { return -40;})
+                        .attr("height", 70)
+                        .attr("width", 70);
+                        
+                            sliderCircle
+                            .filter(function(d) {return d.facebook_2016 !== 1;})
+                            .transition()
+                            .attr("cx", function(d) { return 0;})
+                            .attr("cy", function(d) { return 0;})
+                            .style("stroke", "transparent")
+                            .style("opacity", "1")
+                            .attr("r", 25);  
+                            sliderImage 
+                            .filter(function(d) {return d.facebook_2016 !== 1;})
+                            .transition()
+                            .attr("x", function(d) { return -25;})
+                            .attr("y", function(d) { return -25;})
+                            .attr("height", 50)
+                            .attr("width", 50)
+                            .style("opacity", "0.3");
+
+                          d3.select('.line-facebook')
+                            .style("opacity", "1");    
+                })
+
+                $("#facebook-btn").mouseout(function(){
+
+                          sliderCircle
+                          .transition()
+                          .attr("cx", function(d) { return 0;})
+                          .attr("cy", function(d) { return 0;})
+                          .style( "stroke", "transparent")
+                          .style("opacity", "1")
+                          .attr("r", 25);  
+                          sliderImage 
+                          .transition()
+                          .attr("x", function(d) { return -25;})
+                          .attr("y", function(d) { return -25;})
+                          .attr("height", 50)
+                          .attr("width", 50)
+                          .style("opacity", "1");
+
+                          d3.select('.line-facebook')
+                            .style("opacity", "0.3");    
+                }) 
+
+
+        /******************************************************************************/
+        // slider!!
         $("#year-slider").slider({ 
             value: 2016,
             min: 1990,
@@ -755,37 +1422,39 @@ $("document").ready(function(){
     } 
     
 
-
+    /******************************************************************************/
 
     // set variables. 
-    // var firstModal = document.getElementById ('first-modal');
-    // var firstModalBtn = document.getElementById ('first-modal-btn');
+    var firstModal = document.getElementById ('about-modal');
+    var firstModalBtn = document.getElementById('about-btn');
+    var closeBtn = document.getElementById('close-btn');
 
-    // // set a function to open the first modal.
-    // function openFirstModal() {
-    //     firstModal.style.display ='block';     
-    //     firstModalBtn.style.transition ='.35s ease-in-out';
-    //     firstModalBtn.style.transform ='rotate(45deg)';
-    // }
+    // set a function to open the first modal.
+    function openFirstModal() {
+        firstModal.style.opacity ='1';
+        firstModal.style.zIndex = '10';   
+        firstModalBtn.style.transition ='.35s ease-in-out';   
+    }
 
-    // // set the function to close the first modal.
-    // function xClose() {
-    //     firstModal.style.display ='none';   
-    //     firstModalBtn.style.transition ='.35s ease-in-out';     
-    //     firstModalBtn.style.transform ='rotate(270deg)';
-    // }
+    // set the function to close the first modal.
+    function xClose() {
+        firstModal.style.opacity ='0';
+        firstModal.style.zIndex = '-10';
+        firstModalBtn.style.transition ='.35s ease-in-out';  
+    }
 
-    // // set the click toggle modal function.
-    // function toggleModal() {
-    //     if (firstModal.style.display != 'block') {
-    //         openFirstModal();
-    //     } else {
-    //         xClose();
-    //     }
-    // }
+    // set the click toggle modal function.
+    function toggleModal() {
+        if (firstModal.style.zIndex !== '10') {
+            openFirstModal();
+        } else {
+            xClose();
+        }
+    }
 
-    // // call the toggleModal function.
-    // firstModalBtn.addEventListener ('click', toggleModal, false);
+    // call the toggleModal function.
+    firstModalBtn.addEventListener ('click', toggleModal, false);
+    closeBtn.addEventListener ('click', xClose, false);
 
     /******************************************************************************/
 
