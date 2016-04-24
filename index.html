@@ -17,28 +17,44 @@
     <header>
 <!--       <h1>Bonds of Life</h1> -->
     <div class="titles">
-    	<a href="../html/index.html"><img class="title-img-1" src="img/title.png" ></a>
-    	<a href="../html/index.html"><img class="title-img-2" src="img/title-2.png"></a>
+    	<a href="html/index.html"><img class="title-img-1" src="img/title.png" ></a>
+    	<a href="html/index.html"><img class="title-img-2" src="img/title-2.png"></a>
     </div>
 
     <div class="links">
-    	<div id="links-btn">ABOUT</div>
-    	<div id="links-btn"><a href="#">GITHUB</a></div>
+    	<div class="links-btn" id="about-btn">ABOUT</div>
+    	<div class="links-btn"><a href="https://github.com/wutzui/bonds-of-life-dataviz/tree/gh-pages" target="_blank">GITHUB</a></div>
     </div>
     </header>
 
-    <!-- container for force layout visualisation  -->
+    <div id="about-modal">
+    	<img src="img/close-icon.png" id="close-btn">
+    	<img src="img/my-profile.png" id="profile-img">
+    	<section id="about-p">
+    	<h2>ABOUT</h2>
+    	<p>Yizzy is a Taiwanese-based visual and interactive designer located in New York. Currently, she is studying in MFA Design and Technology program at Parsons the New school of Design. <br> <br> She recently is interested in network functionality and front-end development. She is fascinated with data, interaction and social studies. The passion of studying in user experience and creating interactive platforms may drive her into a new field of exploration in finding new materials and methods for design.</p><br>
+
+    	<div id="contact">
+    		<h4>INFO</h4>
+    		<a href="http://www.yizzywu.com" target="_blank">http://www.yizzywu.com</a>
+    		<span> | </span>
+    		<a href="mailto:wut343@newschool.edu?Subject=Hello%20" target="_top">wut343@newschool.edu</a>
+    		 
+    	</div>
+    	</section>
+    </div>
 
     <section id="pie-chart"></section>
 
     <div id="info">
 	    <h1 id="name">About</h1>
-	    <h2>Click to view their identity</h2>
-	    <h3>And link to their web page!</h3>
+	    <h2 id="relation"></h2>
+	    <h4 id="description">Bonds of Life is a data visualization which maps out the personal history of relationships as well as the the technology development (from the telephone, cell phone text, the internet, and social networks). The data is retrieved from my personal relationships with people I met in my lifetime.</h4>
     </div>
 
     <section id="btns">
 <!--     	<div id="node-length">0</div> -->
+		<center><p>&#8675; Hover &#8675;</p></center>
 	    <div id="physical-btn" class="btn">Physical</div>
 	    <div id="phone-btn" class="btn">Phone</div>
 	    <div id="post-btn" class="btn">Post Mail</div>
@@ -49,6 +65,11 @@
 	    <div id="facebook-btn" class="btn">Facebook</div>
     </section>
 
+
+	<!-- container for line charts  -->
+    <section id="line-chart"></section>
+
+    <!-- container for year slider  -->
     <div id="slider-widget">
     	<div id="show-year"><span>year </span> 2016</div>	    
     	<center><div id="year-slider"></div></center>
@@ -56,11 +77,11 @@
 			<p>1990</p><p>2016</p>
 		</div>
 	</div>
+
+	<!-- container for force layout visualisation  -->
     <center><section id="vis"></section></center> 
-<footer></footer>
 
-
-
+	<footer></footer>
 
 	<script type="text/javascript" src="scripts/main-script.js" async></script>
 <!-- 	<script type="text/javascript" src="../scripts/app.js" async></script> -->
