@@ -115,7 +115,7 @@ path.link {
 
 #name{
 	font-size: 30px; 
-	margin: 10px 0; 
+	margin: 0; 
 	text-transform: uppercase; 
 	font-weight: normal;
 }
@@ -230,6 +230,27 @@ header img {
 // a:active { 
 // 	color: #EE3124; 
 // }
+
+// =================================================================================
+// footer
+// =================================================================================
+
+footer {
+	position: fixed;
+	bottom: 0;
+	height: 30px;
+}
+
+footer p {
+	position: relative;
+	font-size: 12px;
+	left: 30px;
+	bottom: 10px;
+}
+
+// =================================================================================
+// show year number
+// =================================================================================
 
 #show-year {
 	position: fixed;
